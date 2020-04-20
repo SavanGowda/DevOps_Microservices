@@ -5,11 +5,16 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
-
-# Step 2:  
+# dockerpath=savangwd9/udacityproj
+dockerpath=savangwd9/udacityproj
+# Step 2:
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login
+docker tag udacityproj savangwd9/udacityproj
+
 
 # Step 3:
 # Push image to a docker repository
+
+docker push savangwd9/udacityproj
