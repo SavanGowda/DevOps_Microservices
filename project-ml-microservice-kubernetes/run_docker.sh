@@ -4,7 +4,7 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker build --tag=savangwd9/udacityproj .
+docker build --tag=udacityproj .
 
 # Step 2:
 # List docker images

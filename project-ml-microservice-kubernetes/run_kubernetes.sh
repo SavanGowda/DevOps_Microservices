@@ -5,7 +5,7 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
-dockerpath=savangwd9/udacityproj #kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1
+dockerpath=savangwd9/udacityproj
 
 # Step 2
 # Run the Docker Hub container with kubernetes
@@ -15,7 +15,9 @@ kubectl get deployments
 # Step 3:
 # List kubernetes pods
 kubectl get pods
+export POD_NAME=$(kubectl get pods -o go-template \
+  --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward savangwd9/udacityproj 6443:80
+kubectl port-forward $POD_NAME 8000:80
