@@ -6,7 +6,7 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=savangwd9/udacityproj
-dockerpath=savangwd9/udacityproj
+dockerpath="savangwd9/udacityproj"
 # Step 2:
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
